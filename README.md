@@ -25,3 +25,65 @@ This directory would contain the kafka-single-node.yml file
 6. To shutdown and remove the setup, execute this command in the same directory
 
         docker-compose -f kafka-single-node.yml down
+
+
+## Using Kafka
+
+To use Kafka we need the following commands:
+
+### Logging into the Kafka Container
+
+        docker exec -it kafka-broker /bin/bash
+
+### Navigate to the Kafka Scripts directory
+
+        cd /opt/bitnami/kafka/bin
+
+### Creating new Topics
+
+        ./kafka-topics.sh \
+            --zookeeper zookeeper:2181 \
+            --create \
+            --topic kafka.learning.tweets \
+            --partitions 1 \
+            --replication-factor 1
+
+        ./kafka-topics.sh \
+            --zookeeper zookeeper:2181 \
+            --create \
+            --topic kafka.learning.alerts \
+            --partitions 1 \
+            --replication-factor 1
+
+### Listing Topics
+
+        ./kafka-topics.sh \
+            --zookeeper zookeeper:2181 \
+            --list
+
+### Getting details about a Topic
+
+        ./kafka-topics.sh \
+            --zookeeper zookeeper:2181 \
+            --describe
+
+
+### Publishing Messages to Topics
+
+        ./kafka-console-producer.sh \
+            --bootstrap-server localhost:29092 \
+            --topic kafka.learning.tweets
+
+### Consuming Messages from Topics
+
+        ./kafka-console-consumer.sh \
+            --bootstrap-server localhost:29092 \
+            --topic kafka.learning.tweets \
+            --from-beginning
+
+### Deleting Topics
+
+        ./kafka-topics.sh \
+            --zookeeper zookeeper:2181 \
+            --delete \
+            --topic kafka.learning.alerts
