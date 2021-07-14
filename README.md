@@ -2,9 +2,7 @@
 
 Examples of how to use Kafka
 
-## TOC
-- [kafka-examples](#kafka-examples)
-  - [TOC](#toc)
+## Table of Contents
   - [Setting up Kafka](#setting-up-kafka)
   - [Using Kafka](#using-kafka)
     - [Logging into the Kafka Container](#logging-into-the-kafka-container)
