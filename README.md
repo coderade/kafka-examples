@@ -2,6 +2,26 @@
 
 Examples of how to use Kafka
 
+## TOC
+- [kafka-examples](#kafka-examples)
+  - [TOC](#toc)
+  - [Setting up Kafka](#setting-up-kafka)
+  - [Using Kafka](#using-kafka)
+    - [Logging into the Kafka Container](#logging-into-the-kafka-container)
+    - [Navigate to the Kafka Scripts directory](#navigate-to-the-kafka-scripts-directory)
+    - [Creating new Topics](#creating-new-topics)
+    - [Listing Topics](#listing-topics)
+    - [Getting details about a Topic](#getting-details-about-a-topic)
+    - [Publishing Messages to Topics](#publishing-messages-to-topics)
+    - [Consuming Messages from Topics](#consuming-messages-from-topics)
+    - [Deleting Topics](#deleting-topics)
+  - [Working with partitions in Kafka](#working-with-partitions-in-kafka)
+    - [Create a Topic with multiple partitions](#create-a-topic-with-multiple-partitions)
+    - [Check topic partitioning](#check-topic-partitioning)
+    - [Publishing Messages to Topics with keys](#publishing-messages-to-topics-with-keys)
+    - [Consume messages using a consumer group](#consume-messages-using-a-consumer-group)
+    - [Check current status of offsets](#check-current-status-of-offsets)
+
 ## Setting up Kafka
 
 1. Please make sure that Docker is already installed in the system,
